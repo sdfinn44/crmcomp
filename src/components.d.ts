@@ -9,6 +9,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface CrmjustformeDashboard {}
+  interface CrmjustformeEvents {}
+  interface CrmjustformePeople {}
   interface MyComponent {
     /**
     * The first name
@@ -28,17 +31,41 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLCrmjustformeDashboardElement extends Components.CrmjustformeDashboard, HTMLStencilElement {}
+  var HTMLCrmjustformeDashboardElement: {
+    prototype: HTMLCrmjustformeDashboardElement;
+    new (): HTMLCrmjustformeDashboardElement;
+  };
+
+  interface HTMLCrmjustformeEventsElement extends Components.CrmjustformeEvents, HTMLStencilElement {}
+  var HTMLCrmjustformeEventsElement: {
+    prototype: HTMLCrmjustformeEventsElement;
+    new (): HTMLCrmjustformeEventsElement;
+  };
+
+  interface HTMLCrmjustformePeopleElement extends Components.CrmjustformePeople, HTMLStencilElement {}
+  var HTMLCrmjustformePeopleElement: {
+    prototype: HTMLCrmjustformePeopleElement;
+    new (): HTMLCrmjustformePeopleElement;
+  };
+
   interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
   var HTMLMyComponentElement: {
     prototype: HTMLMyComponentElement;
     new (): HTMLMyComponentElement;
   };
   interface HTMLElementTagNameMap {
+    'crmjustforme-dashboard': HTMLCrmjustformeDashboardElement;
+    'crmjustforme-events': HTMLCrmjustformeEventsElement;
+    'crmjustforme-people': HTMLCrmjustformePeopleElement;
     'my-component': HTMLMyComponentElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface CrmjustformeDashboard extends JSXBase.HTMLAttributes<HTMLCrmjustformeDashboardElement> {}
+  interface CrmjustformeEvents extends JSXBase.HTMLAttributes<HTMLCrmjustformeEventsElement> {}
+  interface CrmjustformePeople extends JSXBase.HTMLAttributes<HTMLCrmjustformePeopleElement> {}
   interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {
     /**
     * The first name
@@ -55,6 +82,9 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'crmjustforme-dashboard': CrmjustformeDashboard;
+    'crmjustforme-events': CrmjustformeEvents;
+    'crmjustforme-people': CrmjustformePeople;
     'my-component': MyComponent;
   }
 }
